@@ -1,4 +1,13 @@
 class Wielomian:
+    
+    """
+Definicje funkcji takich jak __init__,__str__, __call__, __add__ napisałam sama.
+
+ChatGPT podpowiedział mi, aby zamiast zwykłych metod użyć specjalnych metod z podwójnymi podkreśleniami `__`, co pozwala na naturalne
+i wygodne korzystanie z obiektów (np. wyświetlanie, wywoływanie jak funkcję, dodawanie).
+
+"""
+
     def __init__(self, wspolczynniki):
         """
         Konstruktor klasy Wielomian.
@@ -98,7 +107,16 @@ class Wielomian:
 
 
 
-# TESTY 
+# TESTY
+
+
+
+"""
+Pomysł na użycie lambdy do testów wyszedł z rozmowy z Chatem.
+Początkowo samodzielnie próbowałam napisać testy, ale ChatGPT wyjaśnił mi, jak lambdy mogą ułatwić tworzenie testów
+i pomógł poprawić formatowanie wypisywania wielomianu, zwłaszcza obsługę znaków plus i minus.
+"""
+
 def test(opis, kod):
     print(f"\n{opis}")
     try:
@@ -115,8 +133,7 @@ test("2. Tworzenie pustego wielomianu:",
 
 test("3. Skracanie zer z końca: [5, 0, 0] ⇒ [5]", lambda: print(Wielomian([5, 0, 0])))
 
-test("4. Stopień wielomianu [3, 0, 2]:",
-     lambda: print(f"{Wielomian([3, 0, 2])} | stopień = {Wielomian([3, 0, 2]).stopien()}"))
+===ien()}"))
 
 test("5. Obliczanie wartości w punkcie x = 1 dla [1, 2, 1]:",
      lambda: print(f"{Wielomian([1, 2, 1])}(1) = {Wielomian([1,2,1])(1)}"))
