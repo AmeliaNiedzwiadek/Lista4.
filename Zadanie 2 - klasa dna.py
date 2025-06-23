@@ -117,6 +117,9 @@ class RNASequence(BioSequence):
     """
 
     def __init__(self, identifier: str, data: str):
+        """
+Analogiczna sytuacja jest tutaj. Również dostałam podpowiedź od chatu aby tutaj użyć  super().__init__ 
+"""
         super().__init__(identifier, data, {'A', 'U', 'G', 'C'})
 
     def complement(self) -> str:
@@ -272,4 +275,21 @@ def test_transcription_and_complement(dna):
 
 if __name__ == "__main__":
     main()
+
+#Podczas tworzenia kodu korzystałam z następujących źródeł:
+#https://docs.python.org/3/tutorial/classes.html
+#https://docs.python.org/3/library/functions.html#super
+#https://docs.python.org/3/library/functions.html#all
+#https://docs.python.org/3/library/stdtypes.html#str.find
+#https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
+#https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
+#https://realpython.com/python3-object-oriented-programming/
+#ChatGPT
+#https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals
+#https://docs.python.org/3/tutorial/errors.html
+#https://docs.python.org/3/reference/compound_stmts.html#the-try-statement
+#https://realpython.com/python-testing/#writing-basic-tests-with-assert
+#https://realpython.com/python-main-function/
+#https://docs.python.org/3/reference/expressions.html#comparisons
+#https://github.com/AmeliaNiedzwiadek/lista-2
 
